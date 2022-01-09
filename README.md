@@ -13,3 +13,9 @@
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Recommended tutorial/reference material
+
+1. [React - The Complete Guide (incl Hooks, React Router, Redux) ](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) --> please check slack channel for shared Udemy Account
+2. [React Docs](https://beta.reactjs.org/)
+3. [MDN for HTML/CSS/JS](https://developer.mozilla.org/en-US/)
