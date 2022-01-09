@@ -7,8 +7,8 @@
 
 ## Links
 
-Figma design for StudyScape:  https://www.figma.com/team_invite/redeem/JhQPkRcVc9nXcV1Ihlat67
-Google Drive for files: https://drive.google.com/drive/folders/1sb5x4u8oTWo5Bp-GdpWxyjTlaQZ88eQO?usp=sharing
+- Figma design for StudyScape:  https://www.figma.com/team_invite/redeem/JhQPkRcVc9nXcV1Ihlat67
+- Google Drive for files: https://drive.google.com/drive/folders/1sb5x4u8oTWo5Bp-GdpWxyjTlaQZ88eQO?usp=sharing
 
 ## Getting Started with Create React App
 
