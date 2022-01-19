@@ -8,7 +8,7 @@ function ClockComponent() {
             const time = new Date();
             var timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             setClockState(timeString);
-        }, 1000); 
+        }, 400); 
     }, []);
 
     return <div style={{fontSize: "55px", margin: "10px"}}>{clockState}</div>};
