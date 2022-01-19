@@ -5,11 +5,12 @@ function ClockComponent() {
 
     useEffect(() => {
         setInterval(() => {
-            const date = new Date();
-            setClockState(date.toLocaleTimeString());
+            const time = new Date();
+            var timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            setClockState(timeString);
         }, 1000); 
     }, []);
 
-    return <div style={{fontSize: "55px", margin: "60px"}}>{clockState}</div>};
+    return <div style={{fontSize: "55px", margin: "10px"}}>{clockState}</div>};
 
 export default ClockComponent;
