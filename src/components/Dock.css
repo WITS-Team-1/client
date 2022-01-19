@@ -46,10 +46,11 @@
       height: auto;
     }
     .footer_center{
-      width:500px;
+      width:700px;
       float:left;
       text-align:center;
-      height:auto;
+      display: flex;
+      justify-content: center;
     }
     .footer h3{
       font-family: 'Helvetica';
