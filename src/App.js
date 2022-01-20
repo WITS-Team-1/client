@@ -6,7 +6,7 @@ import DateComponent from "./ClockComponent/DateComponent";
 
 function App() {
   return (
-    <div className="App">
+    <div className="font-face">
       <header className="App-header">
         <ClockComponent/>
         <DateComponent/>

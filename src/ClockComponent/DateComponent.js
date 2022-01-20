@@ -1,4 +1,5 @@
 import React from "react";
+import WebFont from 'webfontloader';
 
 var date = () =>
 {
@@ -9,7 +10,7 @@ var date = () =>
     var dateString = showDate.toLocaleDateString("en-US", optionsDate);
 
     return(
-        <div>
+        <div style={{fontSize: "31.25px", textAlign: "left", textTransform: "uppercase"}}>
             {weekdayString}
             <br/>
             {dateString}
