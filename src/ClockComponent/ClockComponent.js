@@ -20,9 +20,7 @@ function ClockComponent() {
     }
 
     return( 
-        <div style={
-            {fontSize: "42px", fontWeight: "bold", fontFamily: "KorolevHeavy", margin: "12px", 
-            "-webkit-text-stroke-width": "2.15px", "-webkit-text-stroke-color": "black"}}>
+        <div style={{fontSize: "41px", fontWeight: "bold", margin: "10px"}}>
             {clockState}
         </div>
     );
