@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Korolev-Medium.woff'
 import './fonts/Korolev-Bold.woff'
+import './fonts/Korolev-Heavy.woff'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -18,3 +18,10 @@ code {
    url("./fonts/Korolev-Medium.woff") format("woff");
   font-weight: bold;
 }  
+
+@font-face {
+  font-family: "KorolevHeavy";
+  src: local("KorolevHeavy"),
+   url("./fonts/Korolev-Heavy.woff") format("woff");
+  font-weight: normal;
+}  
