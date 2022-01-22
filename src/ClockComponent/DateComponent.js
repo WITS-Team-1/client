@@ -10,7 +10,8 @@ var date = () =>
     var dateString = showDate.toLocaleDateString("en-US", optionsDate);
 
     return(
-        <div style={{fontSize: "31.25px", textAlign: "left", textTransform: "uppercase"}}>
+        <div style={{fontSize: "30px", fontFamily: "KorolevMedium", color: "black",
+        textAlign: "left", textTransform: "uppercase"}}>
             {weekdayString}
             <br/>
             {dateString}
