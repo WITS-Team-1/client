@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "KorolevMedium";
+  src: local("KorolevMedium"),
+   url("./fonts/Korolev-Medium.woff") format("woff");
+  font-weight: bold;
+}  
+
+@font-face {
+  font-family: "KorolevHeavy";
+  src: local("KorolevHeavy"),
+   url("./fonts/Korolev-Heavy.woff") format("woff");
+  font-weight: normal;
+}  
