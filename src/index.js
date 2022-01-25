@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import Dock from './components/Dock';
 import reportWebVitals from './reportWebVitals';
+import './fonts/Korolev-Medium.woff'
+import './fonts/Korolev-Bold.woff'
+import './fonts/Korolev-Heavy.woff'
 
 ReactDOM.render(
   <React.StrictMode>
