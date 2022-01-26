@@ -3,15 +3,15 @@ import WebFont from 'webfontloader';
 
 var date = () =>
 {
-    var showDate = new Date();
-    var optionsWeekday = { weekday: 'long' }
-    var optionsDate = { month: 'long', day: 'numeric' }
-    var weekdayString = showDate.toLocaleDateString("en-US", optionsWeekday)
-    var dateString = showDate.toLocaleDateString("en-US", optionsDate);
+    const showDate = new Date();
+    const optionsWeekday = { weekday: 'long' }
+    const optionsDate = { month: 'long', day: 'numeric' }
+    const weekdayString = showDate.toLocaleDateString("en-US", optionsWeekday)
+    const dateString = showDate.toLocaleDateString("en-US", optionsDate);
 
     return(
-        <div style={{fontSize: "30px", fontFamily: "KorolevMedium", color: "black",
-        textAlign: "left", textTransform: "uppercase"}}>
+        <div style={{fontSize: "30px", fontFamily: "KorolevMedium", color: "black", position: "relative", left: "11px",
+        textTransform: "uppercase"}}>
             {weekdayString}
             <br/>
             {dateString}

@@ -15,13 +15,14 @@ function ClockComponent() {
 
     function getTime() {
         const time = new Date();
-        var timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         setClockState(timeString);
     }
 
     return( 
         <div style={
-            {fontSize: "42px", fontWeight: "bold", fontFamily: "KorolevHeavy", margin: "12px", 
+            {fontSize: "42px", fontWeight: "bold", fontFamily: "KorolevHeavy", margin: "12px", position: "relative", left: "0px",
+
             "-webkit-text-stroke-width": "2.15px", "-webkit-text-stroke-color": "black"}}>
             {clockState}
         </div>
