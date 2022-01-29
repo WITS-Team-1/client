@@ -1,0 +1,8 @@
+.main-container {
+    position: absolute;
+    display: flex;
+    width: 612px;
+    height: 650px;
+    background: #f2f2f2;
+    border-radius: 20px;
+}
