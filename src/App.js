@@ -7,13 +7,16 @@ import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
 
 function App() {
   return (
-    <div className="font-face">
-        <ChooseTheme></ChooseTheme>
-        <header className="App-header">
-          <ClockComponent/>
-          <DateComponent/>
-        </header>
-    </div>
+    <div className="App">
+      <ChooseTheme></ChooseTheme> 
+    {/* <div className="font-face">
+      <header className="App-header">
+        <ClockComponent />
+        <DateComponent />
+      </header>
+    </div> */}
+  </div>
+
   );
 }
 
