@@ -1,0 +1,13 @@
+.slider-container {
+    --thumb-width: 20px;
+    --thumb-height: 20px;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    background: #838383;
+    border-radius: 50%;
+    cursor: pointer;
+}

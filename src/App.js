@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ClockComponent from "./ClockComponent/ClockComponent";
 import DateComponent from "./ClockComponent/DateComponent";
+import SoundWidget from "./SoundWidget/SoundWidget"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         <ClockComponent/>
         <DateComponent/>
+        <SoundWidget/>
       </header>
     </div>
   );
