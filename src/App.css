@@ -12,12 +12,14 @@ body,
 
 .App {
   text-align: center;
-
+  padding: 30px;    /*Ana added this... the dynamic window sizing change does not work if I add my own sub-div that contains only <ChooseTheme> function*/
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
+
+
 
 .App-logo {
   height: 40vmin;
