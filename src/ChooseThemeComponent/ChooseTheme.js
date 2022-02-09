@@ -1,10 +1,10 @@
 import styles from './ChooseTheme.module.css';
-import Rome from "./assets/Rome.jpg";
-import Tokyo from "./assets/Tokyo.jpg";
-import NewYork from "./assets/NewYork.jpg";
-import Hawaii from "./assets/Hawaii.jpg"
-import ArrowL from"./assets/ArrowL.png";
-import ArrowR from"./assets/ArrowR.png";
+import Rome from "../assets/images/Rome.jpg";
+import Tokyo from "../assets/images/Tokyo.jpg";
+import NewYork from "../assets/images/NewYork.jpg";
+import Hawaii from "../assets/images/Hawaii.jpg"
+import ArrowL from"../assets/images/ArrowL.png";
+import ArrowR from"../assets/images/ArrowR.png";
 import Carousel, {consts} from 'react-elastic-carousel';
 import Flex from './Flex.js';
 import Dot from './Dot.js';

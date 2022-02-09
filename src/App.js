@@ -12,7 +12,6 @@ function App() {
   return (
     <div className='App'>
       <ChooseTheme /> 
-
       <div className='font-face'>
         <header className='App-header'>
 
