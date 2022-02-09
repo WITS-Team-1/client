@@ -11,9 +11,11 @@ import SplashScreen from './SplashScreen/SplashScreen';
 function App() {
   return (
     <div className='App'>
+      <ChooseTheme /> 
+
       <div className='font-face'>
         <header className='App-header'>
-          <ChooseTheme /> 
+
           <ClockComponent />
           <DateComponent />
           <SplashScreen />

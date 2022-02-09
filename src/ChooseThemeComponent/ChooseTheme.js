@@ -1,5 +1,4 @@
-import './ChooseTheme.css';
-import ThemeOption from './ThemeOption';
+import styles from './ChooseTheme.module.css';
 import Rome from "./assets/Rome.jpg";
 import Tokyo from "./assets/Tokyo.jpg";
 import NewYork from "./assets/NewYork.jpg";
@@ -11,10 +10,6 @@ import Flex from './Flex.js';
 import Dot from './Dot.js';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
-
-// import Item from "./ThemeOption";
-
 
 
 class ChooseTheme extends Component{
@@ -70,11 +65,13 @@ class ChooseTheme extends Component{
     ]
   }
 
+  
   render () {
     const { items } = this.state;
     return (
-      <div class="main-container">
+      <div className={styles.main_container}>
         <Carousel 
+          /* Carousel styling and functionality */
           breakPoints={this.breakPoints}
           renderArrow={this.myArrow}
           itemsToScroll={1}
@@ -102,13 +99,15 @@ class ChooseTheme extends Component{
           >
 
           {items.map((item, index) => (
-            <div className='carousel-item-container' key={index}>
-              <img src={item.imgSource} className='option' alt={item.name}/>
-              <button className='option-btn'>
+            <div className={styles.carousel_item_container} key={index}>
+              <img src={item.imgSource} className={styles.option} alt={item.name}/>
+              <button className={styles.option_btn}>
                 <p>{item.name}</p>
               </button>
             </div>
           ))}
+
+
         </Carousel>
       </div>
 
