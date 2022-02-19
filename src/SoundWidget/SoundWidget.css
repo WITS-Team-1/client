@@ -70,3 +70,68 @@
     cursor: pointer;
     opacity: 1;
 }
+
+.text1 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -90px;
+    margin-left: -30px;
+}
+
+.text2 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 16px;
+    margin-left: -30px;
+}
+
+.text3 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    margin-left: -30px;
+}
+
+.text4 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    margin-left: -30px;
+}
+
+.text5 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    margin-left: -30px;
+}
+
+.image1 {
+    margin-top: -294px;
+    margin-left: -27px;
+}
+
+.image2 {
+    margin-top: 45px;
+    margin-left: -27px;
+}
+
+.image3 {
+    margin-top: 45px;
+    margin-left: -27px;
+}
+
+.image4 {
+    margin-top: 45px;
+    margin-left: -27px;
+}
+
+.image5 {
+    margin-top: 45px;
+    margin-left: -27px;
+}
