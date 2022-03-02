@@ -5,19 +5,20 @@ import './App.css';
 import ClockComponent from './ClockComponent/ClockComponent';
 import DateComponent from './ClockComponent/DateComponent';
 import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
-
+import Dock from "./components/Dock"
 import SplashScreen from './SplashScreen/SplashScreen';
-
+import Calendar from './components/Calendar';
 function App() {
   return (
     <div className='App'>
       <ChooseTheme /> 
       <div className='font-face'>
         <header className='App-header'>
-
           <ClockComponent />
           <DateComponent />
           <SplashScreen />
+          <Dock />
+          <Calendar></Calendar>
         </header>
       </div>
     </div>
