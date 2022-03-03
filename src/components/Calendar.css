@@ -84,3 +84,9 @@ p.sdp--text.sdp--month-name {
     width: 350px;
     height: 350px;
 }
+
+.calendarwidget {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}

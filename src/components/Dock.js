@@ -7,11 +7,39 @@
     import todolist from '../assets/images/todolist.png';
     import sounds from '../assets/images/sounds.png';
     import stickers from '../assets/images/stickers.png';
+    import DatePicker from 'sassy-datepicker';
+    import Popup from 'reactjs-popup';
 
     class Dock extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false,
+        };
+        this.toggleShowHide = this.toggleShowHide.bind(this)
+        this.Calendar = this.Calendar.bind(this)
+    }
+    
+    Calendar() {
+        const onChange = (date) => {
+      <button aria-label='edit'>
+        <edit-icon />
+      </button>
+      };
+    }
+    toggleShowHide = () => {       
+        this.setState(state => ({ isOpen: !state.isOpen }));
+      };
     render() {
         return (
         <React.Fragment>
+            <div className='calendarwidget'>
+                {    this.state.isOpen?   
+                <DatePicker onChange={this.Calendar}>
+                    </DatePicker>
+                    :null}
+
+            </div>
             <div className='footer'>
                 <div id="container">
                     <div id="cont">
@@ -20,9 +48,9 @@
                                 <a href="/index.html">
                                     <img src={themes} width="60" height="60" alt="Theme"/>
                                 </a>
-                                <a href="/index.html">
+                                <button onClick={this.toggleShowHide}>
                                     <img src={calendar} width="60" height="60" alt="Calendar"/>
-                                </a>  
+                                </button>  
                                 <a href="index.html">
                                     <img src={timer} width="60" height="60" alt="Timer"/>
                                 </a>
@@ -43,8 +71,12 @@
                     </div>
                 </div>
             </div>
+
         </React.Fragment>
         );
+        
     }
-    }
+}
+
+
     export default Dock;

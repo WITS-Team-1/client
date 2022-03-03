@@ -18,7 +18,6 @@ function App() {
           <DateComponent />
           <SplashScreen />
           <Dock />
-          <Calendar></Calendar>
         </header>
       </div>
     </div>
