@@ -87,6 +87,19 @@ p.sdp--text.sdp--month-name {
 
 .calendarwidget {
     position: absolute;
-    top: 8px;
+    top:200px;
     right: 16px;
+}
+
+.button-noborder {
+    border: none;
+    background-color: transparent;
+}
+
+.button-exit {
+    border: none;
+    background-color: transparent;
+    right: 16px;
+    position: absolute;
+    bottom: 350px;
 }

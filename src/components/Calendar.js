@@ -15,7 +15,6 @@ function Calendar() {
 };
 
 return (
-
   <Popup trigger={<button> Trigger</button>} position="right center">
     {close => (
   <div>
