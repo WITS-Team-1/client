@@ -1,6 +1,25 @@
+html {
+  min-height: 100vh;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+
 .App {
   text-align: center;
+  padding: 30px;    /*Ana added this... the dynamic window sizing change does not work if I add my own sub-div that contains only <ChooseTheme> function*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +33,7 @@
 }
 
 .App-header {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +42,10 @@
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+  
+  
 }
+
 
 .App-link {
   color: #61dafb;

@@ -1,18 +1,26 @@
-import React from "react";
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ClockComponent from "./ClockComponent/ClockComponent";
-import DateComponent from "./ClockComponent/DateComponent";
-import SoundWidget from "./SoundWidget/SoundWidget"
+
+
+import ClockComponent from './ClockComponent/ClockComponent';
+import DateComponent from './ClockComponent/DateComponent';
+import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
+
+import SplashScreen from './SplashScreen/SplashScreen';
 
 function App() {
   return (
-    <div className="font-face">
-      <header className="App-header">
-        <ClockComponent/>
-        <DateComponent/>
-        <SoundWidget/>
-      </header>
+    <div className='App'>
+      <ChooseTheme /> 
+      <div className='font-face'>
+        <header className='App-header'>
+
+          <ClockComponent />
+          <DateComponent />
+          <SplashScreen />
+        </header>
+      </div>
     </div>
   );
 }
