@@ -1,5 +1,4 @@
 import React from 'react';
-import WebFont from 'webfontloader';
 
 var date = () => {
   const showDate = new Date();
