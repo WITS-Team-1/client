@@ -13,8 +13,12 @@ function ThemeButton() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('click');
-    navigate(`/${e.target.id}/select/`, { replace: true });
+
+    //for demo purposes only city scapes is usable
+    const buttonId = e.target.id;
+    if (buttonId === 'cityscape') {
+      navigate(`/${buttonId}/select/`, { replace: true });
+    }
   };
   const themeButtons = themesArr.map((val, index) => {
     return (

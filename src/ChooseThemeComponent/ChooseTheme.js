@@ -11,31 +11,41 @@ import Dot from './Dot.js';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 class ChooseTheme extends Component {
   state = {
-    items: [
+    options: [
       {
         imgSource: Rome,
         name: 'ROME',
+        URL: 'rome',
       },
       {
         imgSource: Tokyo,
         name: 'TOKYO',
-      },
-      {
-        imgSource: NewYork,
-        name: 'NEW YORK',
+        URL: 'tokyo',
       },
       {
         imgSource: Hawaii,
         name: 'HAWAII',
+        URL: 'hawaii',
+      },
+      {
+        imgSource: NewYork,
+        name: 'NEW YORK',
+        URL: 'newyork',
       },
     ],
   };
 
   myArrow({ type, onClick, isEdge }) {
     const pointer =
-      type === consts.PREV ? <img src={ArrowL} /> : <img src={ArrowR} />;
+      type === consts.PREV ? (
+        <img src={ArrowL} alt='<' />
+      ) : (
+        <img src={ArrowR} alt='>' />
+      );
 
     const Button = styled.button`
       background-color: Transparent;
@@ -63,47 +73,52 @@ class ChooseTheme extends Component {
   }
 
   render() {
-    const { items } = this.state;
+    const { options: items } = this.state;
     return (
-      <div className={styles.main_container}>
-        <Carousel
-          /* Carousel styling and functionality */
-          breakPoints={this.breakPoints}
-          renderArrow={this.myArrow}
-          itemsToScroll={1}
-          itemsToShow={4}
-          tiltEasing='cubic-bezier(0.110, 1, 1.000, 0.210)'
-          transitionMs={700}
-          renderPagination={({ pages, activePage, onClick }) => {
-            return (
-              <Flex direction='row'>
-                {pages.map((page) => {
-                  const isActivePage = activePage === page;
-                  return (
-                    <Dot
-                      key={page}
-                      onClick={() => onClick(page)}
-                      active={isActivePage}
-                    />
-                  );
-                })}
-              </Flex>
-            );
-          }}
-        >
-          {items.map((item, index) => (
-            <div className={styles.carousel_item_container} key={index}>
-              <img
-                src={item.imgSource}
-                className={styles.option}
-                alt={item.name}
-              />
-              <button className={styles.option_btn}>
-                <p>{item.name}</p>
-              </button>
-            </div>
-          ))}
-        </Carousel>
+      <div className={styles.layoutContainer}>
+        <div className={styles.carouselBackground}>
+          <Carousel
+            breakPoints={this.breakPoints}
+            renderArrow={this.myArrow}
+            itemsToScroll={1}
+            itemsToShow={4}
+            tiltEasing='cubic-bezier(0.110, 1, 1.000, 0.210)'
+            transitionMs={700}
+            renderPagination={({ pages, activePage, onClick }) => {
+              return (
+                <Flex direction='row'>
+                  {pages.map((page) => {
+                    const isActivePage = activePage === page;
+                    return (
+                      <Dot
+                        key={page}
+                        onClick={() => onClick(page)}
+                        active={isActivePage}
+                      />
+                    );
+                  })}
+                </Flex>
+              );
+            }}
+          >
+            {items.map((item, index) => (
+              <Link
+                className={styles.carousel_item_container}
+                key={index}
+                to={item.URL}
+              >
+                <img
+                  src={item.imgSource}
+                  className={styles.optionImage}
+                  alt={item.name}
+                />
+                <button className={styles.optionButton}>
+                  <p>{item.name}</p>
+                </button>
+              </Link>
+            ))}
+          </Carousel>
+        </div>
       </div>
     );
   }
