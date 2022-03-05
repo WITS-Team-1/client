@@ -4,13 +4,15 @@ import './App.css';
 
 import ClockComponent from './ClockComponent/ClockComponent';
 import DateComponent from './ClockComponent/DateComponent';
+import ThemeButton from './ThemeButton/ThemeButton';
 import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
-
 import SplashScreen from './SplashScreen/SplashScreen';
 
 function App() {
   return (
     <div className='App'>
+      <ThemeButton></ThemeButton> 
+      <div className='font-face'>
       <ChooseTheme /> 
       <div className='font-face'>
         <header className='App-header'>
@@ -19,7 +21,7 @@ function App() {
           <DateComponent />
           <SplashScreen />
         </header>
-      </div>
+    </div>
     </div>
   );
 }
