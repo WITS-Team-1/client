@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -15,13 +16,13 @@ code {
 @font-face {
   font-family: "KorolevMedium";
   src: local("KorolevMedium"),
-   url("./fonts/Korolev-Medium.woff") format("woff");
+   url("./assets/fonts/Korolev-Medium.woff") format("woff");
   font-weight: bold;
 }  
 
 @font-face {
   font-family: "KorolevHeavy";
   src: local("KorolevHeavy"),
-   url("./fonts/Korolev-Heavy.woff") format("woff");
+   url("./assets/fonts/Korolev-Heavy.woff") format("woff");
   font-weight: normal;
 }  
