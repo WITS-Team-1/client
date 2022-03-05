@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import './assets/fonts/Korolev-Medium.woff';
 import './assets/fonts/Korolev-Bold.woff';
 import './assets/fonts/Korolev-Heavy.woff';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import SplashScreen from './SplashScreen/SplashScreen';
-import ThemeButton from './ThemeButton/ThemeButton';
-import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
+import SplashScreen from './components/SplashScreen/SplashScreen';
+import ThemeButton from './components/ThemeSelection/ThemeButton';
+import ChooseTheme from './components/ThemeCarousel/ChooseTheme';
+import App from './App';
 
 ReactDOM.render(
   <Router>

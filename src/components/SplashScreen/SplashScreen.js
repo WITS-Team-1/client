@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/images/splashimage/splashimage.png';
+import logo from '../../assets/images/splashimage/splashimage.png';
 import styles from './SplashScreen.module.css';
 
 import { useNavigate } from 'react-router-dom';

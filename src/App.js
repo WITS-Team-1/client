@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './App.module.css';
 
 import Dock from './components/Dock/Dock';
-import TimeWidget from './TimeWidget/TimeWidget';
+import TimeWidget from './components/TimeWidget/TimeWidget';
 
 function App() {
   return (

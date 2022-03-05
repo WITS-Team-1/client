@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'KorolevLight';
   src: local('KorolevLight'),
-    url('../assets/fonts/Korolev-Light.woff') format('woff');
+    url('../../assets/fonts/Korolev-Light.woff') format('woff');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'KorolevHeavy';
   src: local('KorolevHeavy'),
-    url('../assets/fonts/Korolev-Heavy.woff') format('woff');
+    url('../../assets/fonts/Korolev-Heavy.woff') format('woff');
   font-weight: normal;
 }
 
