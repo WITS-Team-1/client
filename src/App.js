@@ -1,15 +1,27 @@
 import React from 'react';
-import styles from './App.module.css';
+import logo from './logo.svg';
+import './App.css';
 
-import Dock from './components/Dock/Dock';
-import TimeWidget from './components/TimeWidget/TimeWidget';
+import ClockComponent from './ClockComponent/ClockComponent';
+import DateComponent from './ClockComponent/DateComponent';
+import ThemeButton from './ThemeButton/ThemeButton';
+import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
+import SplashScreen from './SplashScreen/SplashScreen';
 
 function App() {
   return (
-    <div className={styles.layoutContainer}>
-      <div className={styles.heroImage}></div>
-      <TimeWidget />
-      <Dock />
+    <div className='App'>
+      <ThemeButton></ThemeButton> 
+      <div className='font-face'>
+      <ChooseTheme /> 
+      <div className='font-face'>
+        <header className='App-header'>
+
+          <ClockComponent />
+          <DateComponent />
+          <SplashScreen />
+        </header>
+    </div>
     </div>
   );
 }
