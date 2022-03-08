@@ -69,14 +69,16 @@ function SoundWidgetv2() {
   });
 
   return (
-    <div
-      className={styles.widgetContainer}
-      style={{ display: widgetDisplayStyle }}
-    >
-      <div className={styles.closeButton}>
-        <button onClick={hideWidgetClick}>X</button>
+    <div className={styles.positionAbsoluteContainer}>
+      <div
+        className={styles.widgetContainer}
+        style={{ display: widgetDisplayStyle }}
+      >
+        <div className={styles.closeButton}>
+          <button onClick={hideWidgetClick}>X</button>
+        </div>
+        {soundsWidget}
       </div>
-      {soundsWidget}
     </div>
   );
 }

@@ -1,3 +1,9 @@
+.positionAbsoluteContainer {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+}
+
 .widgetContainer {
   display: flex;
   flex-direction: column;
