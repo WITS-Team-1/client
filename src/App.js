@@ -1,28 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-//import './App.css';
-
-import ClockComponent from './ClockComponent/ClockComponent';
-import DateComponent from './ClockComponent/DateComponent';
-import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
-import SoundWidget from './SoundWidget/SoundWidget';
-import SplashScreen from './SplashScreen/SplashScreen';
 import SoundWidgetv2 from './SoundWidget2/SoundWidget';
+import styles from './App.module.css';
+
+import Dock from './components/Dock/Dock';
+import TimeWidget from './components/TimeWidget/TimeWidget';
 
 function App() {
   return (
-    // <div className='App'>
-    //   <ChooseTheme /> 
-    //   <div className='font-face'>
-    //     <header className='App-header'>
-    //       <ClockComponent />
-    //       <DateComponent />
-    //       <SplashScreen />
-    //     </header>
-    //     <SoundWidget/>
-    //   </div>
-    // </div>
-    <SoundWidgetv2/>
+    <div className={styles.layoutContainer}>
+      <div className={styles.heroImage}></div>
+      <TimeWidget />
+      <Dock />
+      <SoundWidgetv2/>
+    </div>
   );
 }
 
