@@ -44,6 +44,8 @@
   padding: 0;
   margin-bottom: 10px;
   font-size: 16px;
+  color: black;
+  text-align: left;
 }
 
 .soundRangeContainer {
