@@ -7,6 +7,7 @@ import spotify from '../../assets/images/spotify.png';
 import todolist from '../../assets/images/todolist.png';
 import sounds from '../../assets/images/sounds.png';
 import stickers from '../../assets/images/stickers.png';
+import { Link } from 'react-router-dom';
 
 const Dock = (props) => {
   return (
@@ -16,9 +17,9 @@ const Dock = (props) => {
           <div id='cont'>
             <div className='footer_center'>
               <section id='icons'>
-                <a href='/index.html'>
+                <Link to='/chooseTheme'>
                   <img src={themes} width='60' height='60' alt='Theme' />
-                </a>
+                </Link>
                 <a href='/index.html'>
                   <img src={calendar} width='60' height='60' alt='Calendar' />
                 </a>
