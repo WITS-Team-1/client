@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Pomodoro.module.css';
 import playButton from '../../assets/images/Pomodoro/startButton.png';
+import pauseButton from '../../assets/images/Pomodoro/pauseButton.png';
 
 const Pomodoro = () => {
+  const [timerActive, setTimerActive] = useState(false);
+
   const handleClick = (e) => {
     e.preventDefault();
+    setTimerActive(!timerActive);
   };
 
   return (
@@ -26,7 +30,7 @@ const Pomodoro = () => {
         </div>
       </div>
       <button className={styles.startButton} onClick={handleClick}>
-        <img src={playButton} alt='play' />
+        <img src={timerActive ? pauseButton : playButton} alt='play' />
       </button>
     </div>
   );
