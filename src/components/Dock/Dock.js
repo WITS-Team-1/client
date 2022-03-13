@@ -10,6 +10,11 @@ import stickers from '../../assets/images/stickers.png';
 import { Link } from 'react-router-dom';
 
 const Dock = (props) => {
+  const pomodoroHandler = (e) => {
+    e.preventDefault();
+    props.showPomodoro();
+  };
+
   return (
     <React.Fragment>
       <div className='footer'>
@@ -23,9 +28,9 @@ const Dock = (props) => {
                 <a href='/index.html'>
                   <img src={calendar} width='60' height='60' alt='Calendar' />
                 </a>
-                <a href='index.html'>
+                <button onClick={pomodoroHandler}>
                   <img src={timer} width='60' height='60' alt='Timer' />
-                </a>
+                </button>
                 <a href='index.html'>
                   <img src={spotify} width='60' height='60' alt='Spotify' />
                 </a>

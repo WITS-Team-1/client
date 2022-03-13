@@ -1,13 +1,4 @@
 .pomodoroContainer {
-  font-family: 'Korolev Bold';
-  --background-color: #e9e9ed;
-  background-color: var(--background-color);
-  width: 426px;
-  height: 139px;
-  border-radius: 20px;
-  position: absolute;
-  top: 638px;
-  left: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -41,4 +32,35 @@
   font-family: 'KorolevMedium';
   width: 110px;
   font-size: 39px;
+}
+
+.widgetContainer {
+  font-family: 'Korolev Bold';
+  --background-color: #e9e9ed;
+  background-color: var(--background-color);
+  width: 426px;
+  height: 139px;
+  border-radius: 20px;
+  position: absolute;
+  top: 638px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetHeader {
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+  margin-top: 14px;
+  margin-right: 14px;
+}
+
+.widgetHeader button {
+  border: none;
+}
+
+.widgetHeader button:hover {
+  border: none;
+  pointer-events: none;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Pomodoro.module.css';
 import playButton from '../../assets/images/Pomodoro/startButton.png';
 import pauseButton from '../../assets/images/Pomodoro/pauseButton.png';
+import closeButton from '../../assets/images/Pomodoro/closeButton.png';
 
 function Timer(props) {
   return (
@@ -16,7 +17,7 @@ function Timer(props) {
   );
 }
 
-const Pomodoro = () => {
+const Pomodoro = (props) => {
   const [timerActive, setTimerActive] = useState(false);
   const [breakActive, setBreakActive] = useState(false);
 
@@ -104,24 +105,39 @@ const Pomodoro = () => {
       : null;
   }, [breakActive, breakSeconds]);
 
+  const modalHandler = (e) => {
+    e.preventDefault();
+    props.setHide();
+  };
+
   return (
-    <div className={styles.pomodoroContainer}>
-      <Timer
-        type={'Timer'}
-        minutes={timerMinutesString(timerMinutes)}
-        seconds={timerSecondsString(timerSeconds)}
-      />
-      <Timer
-        type={'Break'}
-        minutes={timerMinutesString(breakMinutes)}
-        seconds={timerSecondsString(breakSeconds)}
-      />
-      <button className={styles.startButton} onClick={handleClick}>
-        <img
-          src={timerActive || breakActive ? pauseButton : playButton}
-          alt='play'
+    <div
+      className={styles.widgetContainer}
+      style={{ display: props.show ? 'block' : 'none' }}
+    >
+      <div className={styles.widgetHeader}>
+        <button onClick={modalHandler}>
+          <img src={closeButton} alt='close' width={14} />
+        </button>
+      </div>
+      <div className={styles.pomodoroContainer}>
+        <Timer
+          type={'Timer'}
+          minutes={timerMinutesString(timerMinutes)}
+          seconds={timerSecondsString(timerSeconds)}
         />
-      </button>
+        <Timer
+          type={'Break'}
+          minutes={timerMinutesString(breakMinutes)}
+          seconds={timerSecondsString(breakSeconds)}
+        />
+        <button className={styles.startButton} onClick={handleClick}>
+          <img
+            src={timerActive || breakActive ? pauseButton : playButton}
+            alt='play'
+          />
+        </button>
+      </div>
     </div>
   );
 };
