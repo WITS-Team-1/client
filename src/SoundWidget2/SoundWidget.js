@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import sound_widget from '../assets/images/sound_widget.png';
+import x_button from '../assets/images/x_button.png';
 import styles from './SoundWidget.module.css';
 
 function SoundSlider(props) {
@@ -37,13 +38,19 @@ function SoundWidgetv2() {
 
   const sounds = [
     {
-      soundName: 'HAWAII',
+      soundName: 'WAVES',
     },
     {
-      soundName: 'CAFE',
+      soundName: 'WIND',
     },
     {
-      soundName: 'STREET'
+      soundName: 'BIRDS'
+    },
+    {
+      soundName: 'WHITE NOISE'
+    },
+    {
+      soundName: 'MUSIC'
     }
   ];
 
@@ -75,7 +82,7 @@ function SoundWidgetv2() {
         style={{ display: widgetDisplayStyle }}
       >
         <div className={styles.closeButton}>
-          <button onClick={hideWidgetClick}>X</button>
+          <button onClick={hideWidgetClick}> <img src={x_button} width='16' height='16' alt='x-icon' />{' '} </button>
         </div>
         {soundsWidget}
       </div>
