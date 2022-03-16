@@ -84,7 +84,7 @@ function SoundWidgetv2() {
         <div className={styles.closeButton}>
           <button onClick={hideWidgetClick}>
             {' '}
-            <img src={x_button} width='16' height='16' alt='x-icon' />{' '}
+            <img src={x_button} width='14' height='14' alt='x-icon' />{' '}
           </button>
         </div>
         {soundsWidget}
