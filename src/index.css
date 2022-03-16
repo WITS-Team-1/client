@@ -14,15 +14,23 @@ code {
 }
 
 @font-face {
-  font-family: "KorolevMedium";
-  src: local("KorolevMedium"),
-   url("./assets/fonts/Korolev-Medium.woff") format("woff");
+  font-family: 'KorolevMedium';
+  src: local('KorolevMedium'),
+    url('./assets/fonts/Korolev-Medium.woff') format('woff');
   font-weight: bold;
-}  
+}
 
 @font-face {
-  font-family: "KorolevHeavy";
-  src: local("KorolevHeavy"),
-   url("./assets/fonts/Korolev-Heavy.woff") format("woff");
+  font-family: 'KorolevHeavy';
+  src: local('KorolevHeavy'),
+    url('./assets/fonts/Korolev-Heavy.woff') format('woff');
   font-weight: normal;
-}  
+}
+
+@font-face {
+  font-family: 'Korolev Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Korolev Bold'),
+    url('./assets/fonts/Korolev-Bold.woff') format('woff');
+}
