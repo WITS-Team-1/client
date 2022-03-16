@@ -20,29 +20,32 @@
         this.Calendar = this.Calendar.bind(this)
         this.openCalendar = this.openCalendar.bind(this)
     }
-    
+      
     Calendar =() => {
         const onChange = (date) => {
-      <button aria-label='edit'>
+        <button aria-label='edit'>
         <edit-icon />
       </button>
       };
     }
     openCalendar = () => {
-        this.setState(state => ({ isOpen: true}));
+        this.setState({isOpen: true});
     };
     toggleShowHide = () => {       
         this.setState(state => ({ isOpen: !state.isOpen }));
       };
+
     render() {
         return (
         <React.Fragment>
             <div className='calendarwidget'>
-                {    this.state.isOpen?   
+                {this.state.isOpen?   
                 <React.Fragment>
+                    <div className='calendarFonts'>
                 <button className='button-exit'><img src={exit} alt="exit" onClick={this.toggleShowHide}/></button>
                 <DatePicker onChange={this.Calendar}>
                     </DatePicker>
+                    </div>
                     </React.Fragment>
                     :null}
             </div>
@@ -51,27 +54,27 @@
                     <div id="cont">
                         <div className="footer_center">
                             <section id="icons">
-                                <a href="/index.html">
-                                    <img src={themes} width="60" height="60" alt="Theme"/>
-                                </a>
+                                <button className="button-noborder">
+                                    <img src={themes} width="100px" height="100px" alt="Theme"/>
+                                </button>
                                 <button className="button-noborder" onClick={this.openCalendar}>
-                                    <img src={calendar} width="60" height="60" alt="Calendar"/>
+                                    <img src={calendar} width="100px" height="100px" alt="Calendar"/>
                                 </button>  
-                                <a href="index.html">
-                                    <img src={timer} width="60" height="60" alt="Timer"/>
-                                </a>
-                                <a href="index.html">
-                                    <img src={spotify} width="60" height="60" alt="Spotify"/>
-                                </a>
-                                <a href="index.html">
-                                    <img src={todolist} width="60" height="60" alt="To-do List"/> 
-                                </a>
-                                <a href="index.html">
-                                    <img src={sounds} width="60" height="60" alt="Sounds"/>
-                                </a>    
-                                <a href="index.html">
-                                    <img src={stickers} width="60" height="60" alt="Sticky"/>
-                                </a>
+                                <button className="button-noborder">
+                                    <img src={timer} width="100px" height="100px" alt="Timer"/>
+                                </button>
+                                <button className="button-noborder">
+                                    <img src={spotify} width="100px" height="100px" alt="Spotify"/>
+                                </button>
+                                <button className="button-noborder">
+                                    <img src={todolist} width="100px" height="100px" alt="To-do List"/> 
+                                </button>
+                                <button className="button-noborder">
+                                    <img src={sounds} width="100px" height="100px" alt="Sounds"/>
+                                </button>    
+                                <button className="button-noborder">
+                                    <img src={stickers} width="100px" height="100px" alt="Sticky"/>
+                                </button>
                             </section>
                         </div>
                     </div>
