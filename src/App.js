@@ -1,4 +1,5 @@
 import React from 'react';
+import SoundWidgetv2 from './SoundWidget2/SoundWidget';
 import styles from './App.module.css';
 
 import Dock from './components/Dock/Dock';
@@ -10,6 +11,7 @@ function App() {
       <div className={styles.heroImage}></div>
       <TimeWidget />
       <Dock />
+      <SoundWidgetv2/>
     </div>
   );
 }
