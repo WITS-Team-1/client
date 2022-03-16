@@ -15,6 +15,11 @@ const Dock = (props) => {
     props.showPomodoro();
   };
 
+  const soundHandler = (e) => {
+    e.preventDefault();
+    props.showSound();
+  };
+
   return (
     <React.Fragment>
       <div className='footer'>
@@ -37,9 +42,9 @@ const Dock = (props) => {
                 <a href='index.html'>
                   <img src={todolist} width='60' height='60' alt='To-do List' />
                 </a>
-                <a href='index.html'>
+                <button onClick={soundHandler}>
                   <img src={sounds} width='60' height='60' alt='Sounds' />
-                </a>
+                </button>
                 <a href='index.html'>
                   <img src={stickers} width='60' height='60' alt='Sticky' />
                 </a>

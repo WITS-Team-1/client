@@ -8,6 +8,7 @@ import Pomodoro from './components/Pomodoro/Pomodoro';
 
 function App() {
   const [showPomodoro, setShowPomodoro] = useState(true);
+  const [showSound, setShowSound] = useState(true);
 
   const showPomodoroHandler = () => {
     setShowPomodoro(true);
@@ -17,13 +18,21 @@ function App() {
     setShowPomodoro(false);
   };
 
+  const showSoundHandler = () => {
+    setShowSound(true);
+  };
+
+  const hideSounderHandler = () => {
+    setShowSound(false);
+  };
+
   return (
     <div className={styles.layoutContainer}>
       <div className={styles.heroImage}></div>
       <TimeWidget />
       <Pomodoro show={showPomodoro} setHide={hidePomodoroHandler} />
-      <SoundWidget />
-      <Dock showPomodoro={showPomodoroHandler} />
+      <SoundWidget show={showSound} setHide={hideSounderHandler} />
+      <Dock showPomodoro={showPomodoroHandler} showSound={showSoundHandler} />
     </div>
   );
 }
