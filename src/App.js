@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SoundWidgetv2 from './SoundWidget2/SoundWidget';
 import styles from './App.module.css';
 
 import Dock from './components/Dock/Dock';
@@ -21,6 +22,7 @@ function App() {
       <div className={styles.heroImage}></div>
       <TimeWidget />
       <Pomodoro show={showPomodoro} setHide={hidePomodoroHandler} />
+      <SoundWidgetv2/>
       <Dock showPomodoro={showPomodoroHandler} />
     </div>
   );
