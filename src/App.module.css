@@ -1,0 +1,14 @@
+.layoutContainer {
+  height: 100vh;
+  width: 100vw;
+}
+
+.heroImage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-position: 50% 50%;
+  background-image: url('./assets/images/heroimages/hawaii_kauai.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

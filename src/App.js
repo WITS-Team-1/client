@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SoundWidget from './SoundWidget/SoundWidget';
+import styles from './App.module.css';
 
-import ClockComponent from './ClockComponent/ClockComponent';
-import DateComponent from './ClockComponent/DateComponent';
-import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
-import Dock from "./components/Dock"
-import SplashScreen from './SplashScreen/SplashScreen';
+import Dock from './components/Dock/Dock';
+import TimeWidget from './components/TimeWidget/TimeWidget';
+import Pomodoro from './components/Pomodoro/Pomodoro';
 
 function App() {
+  const [showPomodoro, setShowPomodoro] = useState(true);
+
+  const showPomodoroHandler = () => {
+    setShowPomodoro(true);
+  };
+
+  const hidePomodoroHandler = () => {
+    setShowPomodoro(false);
+  };
+
   return (
-    <div className='App'>
-      <ChooseTheme /> 
-      <div className='font-face'>
-        <header className='App-header'>
-          <ClockComponent />
-          <DateComponent />
-          <SplashScreen />
-          <Dock />
-        </header>
-      </div>
+    <div className={styles.layoutContainer}>
+      <div className={styles.heroImage}></div>
+      <TimeWidget />
+      <Pomodoro show={showPomodoro} setHide={hidePomodoroHandler} />
+      <SoundWidget />
+      <Dock showPomodoro={showPomodoroHandler} />
     </div>
   );
 }

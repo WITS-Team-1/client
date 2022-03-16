@@ -1,14 +1,14 @@
     import React from 'react';
     import './Dock.css';
-    import themes from '../assets/images/themes.png';
-    import calendar from '../assets/images/calendar.png';
-    import timer from '../assets/images/timer.png';
-    import spotify from '../assets/images/spotify.png';
-    import todolist from '../assets/images/todolist.png';
-    import sounds from '../assets/images/sounds.png';
-    import stickers from '../assets/images/stickers.png';
+    import themes from '../../assets/images/dock/themes.png';
+    import calendar from '../../assets/images/dock/calendar.png';
+    import timer from '../../assets/images/dock/timer.png';
+    import spotify from '../../assets/images/dock/spotify.png';
+    import todolist from '../../assets/images/dock/todolist.png';
+    import sounds from '../../assets/images/dock/sounds.png';
+    import stickers from '../../assets/images/dock/stickers.png';
     import DatePicker from 'sassy-datepicker';
-    import exit from "../assets/images/exit.png"
+    import exit from "../../assets/images/x_button.png"
 
     class Dock extends React.Component {
     constructor(props) {
@@ -55,25 +55,25 @@
                         <div className="footer_center">
                             <section id="icons">
                                 <button className="button-noborder">
-                                    <img src={themes} width="100px" height="100px" alt="Theme"/>
+                                    <img src={themes} width="60" height="60" alt="Theme"/>
                                 </button>
                                 <button className="button-noborder" onClick={this.openCalendar}>
-                                    <img src={calendar} width="100px" height="100px" alt="Calendar"/>
+                                    <img src={calendar} width="60" height="60" alt="Calendar"/>
                                 </button>  
                                 <button className="button-noborder">
-                                    <img src={timer} width="100px" height="100px" alt="Timer"/>
+                                    <img src={timer} width="60" height="60" alt="Timer"/>
                                 </button>
                                 <button className="button-noborder">
-                                    <img src={spotify} width="100px" height="100px" alt="Spotify"/>
+                                    <img src={spotify} width="60" height="60" alt="Spotify"/>
                                 </button>
                                 <button className="button-noborder">
-                                    <img src={todolist} width="100px" height="100px" alt="To-do List"/> 
+                                    <img src={todolist} width="60" height="60" alt="To-do List"/> 
                                 </button>
                                 <button className="button-noborder">
-                                    <img src={sounds} width="100px" height="100px" alt="Sounds"/>
+                                    <img src={sounds} width="60" height="60" alt="Sounds"/>
                                 </button>    
                                 <button className="button-noborder">
-                                    <img src={stickers} width="100px" height="100px" alt="Sticky"/>
+                                    <img src={stickers} width="60" height="60" alt="Sticky"/>
                                 </button>
                             </section>
                         </div>
