@@ -1,78 +1,87 @@
 .todoItem {
-    margin: 10px;
-    cursor: pointer;
+  margin: 0px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .completed {
-    text-decoration: line-through;
-    color: gray;
+  text-decoration: line-through;
+  color: gray;
 }
 
-[type='submit']{
-    color: black;
-    background: 0;
-    border: 0;
- 
+[type='submit'] {
+  color: black;
+  background: 0;
+  border: 0;
 }
 
-[type='submit']:hover{
-    cursor: pointer;
-    list-style: square;
+[type='submit']:hover {
+  cursor: pointer;
+  list-style: square;
 }
 
-.widgetheader button{
-    cursor: pointer;
-    border:none;
-    justify-self: flex-end;
+.widgetheader button {
+  cursor: pointer;
+  border: none;
+  justify-self: flex-end;
 }
-.widgetheader button:hover{
-    cursor: pointer;
-    border: none;
-    pointer-events: none;
-}
-
-.todoListContainer{
-    position:relative;
-    margin-top: 50;
-    
-
-}
-.addTodoContainer{
-    position: absolute;
-    bottom: 425px;
-    left: 7px;
-    border: none;
-}
-.addTodoContainer input{
-    border:none;
-    font-family: 'KorolevMedium';
+.widgetheader button:hover {
+  cursor: pointer;
+  border: none;
+  pointer-events: none;
 }
 
-.widgetcontainer{
-    font-family: "KorolevMedium";
-    background-color: #f5f5f5;
-    left:831px;
-    top: 99px;
-    width: 255px;
-    height: 203px;
-    border-radius: 20px;
-    
+.todoListContainer {
+  height: 185px;
+  margin-left: 20px;
 }
-
-.widgetheader{
+.addTodoContainer {
   display: flex;
   border: none;
-  
-  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.addTodoContainer input {
+  border: none;
+  background: none;
+  font-family: 'KorolevMedium';
+  height: 24px;
 }
 
-.widgetheader input{
-    border: none;
-    font-family: 'KorolevHeavy';
-    
+.widgetcontainer {
+  font-family: 'KorolevMedium';
+  background-color: #f5f5f5;
+  left: 831px;
+  top: 99px;
+  width: 328px;
+  height: 268px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
+.widgetheader {
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.widgetheader input {
+  border: none;
+  font-family: 'KorolevMedium';
+  font-size: 20px;
+  background: #f5f5f5;
+  width: 75%;
+  padding: 0;
+}
+
+.widgetheader button {
+  background: transparent;
+}
 
 /**{
     position: absolute;
@@ -85,16 +94,3 @@
     border-radius: 20px;
     display: flex;
 }**/
-
-
-
-
-
-
-
-
-
-
-
-
-

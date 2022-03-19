@@ -5,13 +5,12 @@ import closeButton from './assets/images/x_button.png';
 import AddTodo from './AddTodo/addTodo';
 
 import './App.css';
-import './ToDoItem/Todo.css'
+import './ToDoItem/Todo.css';
 import ClockComponent from './ClockComponent/ClockComponent';
 import DateComponent from './ClockComponent/DateComponent';
 import ChooseTheme from './ChooseThemeComponent/ChooseTheme';
 
 import SplashScreen from './SplashScreen/SplashScreen';
- 
 
 /**function App() {
 
@@ -33,15 +32,8 @@ import SplashScreen from './SplashScreen/SplashScreen';
 
 }**/
 
-
-
-
 function App(props) {
   const [todos, setTodos] = useState([]);
- 
-
-
-  
 
   useEffect(() => {
     const todos = localStorage.getItem('todos');
@@ -101,17 +93,21 @@ function App(props) {
   };
   const inputRef = useRef();
 
-
   return (
-    <div class='widgetcontainer'>
-      <div class='widgetheader'>
-      <input ref={inputRef} id='title' type='text'></input>
-        <button onClick ={modalHandler}> 
-        < img src={closeButton} alt='close' width={14}/>
+    <div className='widgetcontainer' style={{ display: 'flex' }}>
+      <div className='widgetheader'>
+        <input
+          ref={inputRef}
+          id='title'
+          type='text'
+          placeholder='List Item'
+        ></input>
+        <button onClick={modalHandler}>
+          <img src={closeButton} alt='close' width={14} />
         </button>
       </div>
-        <AddTodo addTodoFn={addTodo}></AddTodo>
       <TodoList updateTodoFn={updateTodo} todos={todos}></TodoList>
+      <AddTodo addTodoFn={addTodo}></AddTodo>
     </div>
   );
 }
