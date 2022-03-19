@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react"
-// import '/Users/user/Documents/GitHub/client/src/ToDoItem/Todo.css';
 import '../ToDoItem/Todo.css'
-
+import taskButton from '../assets/images/coolicon.png';
 /**class AddTodo extends React.Component {
 
     constructor(){
@@ -38,7 +37,7 @@ import '../ToDoItem/Todo.css'
     }
 
 }**/
-
+let counter = 0;
 function AddTodo(props) {
 
     const [todo, setTodo] = useState('')
@@ -50,8 +49,12 @@ function AddTodo(props) {
     }
     const submitTodo = (e) => {
         e.preventDefault();
+        if(counter < 4){
         props.addTodoFn(todo);
         inputRef.current.value = ""
+        counter++;    
+        }
+        
     }
 
     return (
@@ -60,7 +63,9 @@ function AddTodo(props) {
 
                 <input ref={inputRef} id='addTodoInput' onChange={updateInput} type='text'></input>
 
-                <button type='submit'>Add new task</button>
+                <button type='submit'>
+                    <img src={taskButton}/>
+                </button>
             </form>
         </div>
     );
