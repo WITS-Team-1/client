@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import sound_widget from '../assets/images/sound_widget.png';
-import x_button from '../assets/images/x_button.png';
+import sound_widget from '../../assets/images/sound_widget.png';
+import x_button from '../../assets/images/x_button.png';
 import styles from './SoundWidget.module.css';
 
 function SoundSlider(props) {

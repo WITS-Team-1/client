@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SoundWidget from './SoundWidget/SoundWidget';
+import SoundWidget from './components/SoundWidget/SoundWidget';
 import styles from './App.module.css';
 
 import Dock from './components/Dock/Dock';
