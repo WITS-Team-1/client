@@ -79,6 +79,9 @@ const Pomodoro = (props) => {
           }
         }, 1000)
       : null;
+    return () => {
+      clearInterval(interval);
+    };
   }, [timerActive, timerSeconds]);
 
   useEffect(() => {
@@ -103,6 +106,9 @@ const Pomodoro = (props) => {
           }
         }, 1000)
       : null;
+    return () => {
+      clearInterval(interval);
+    };
   }, [breakActive, breakSeconds]);
 
   const modalHandler = (e) => {
