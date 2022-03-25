@@ -22,9 +22,9 @@ const Pomodoro = (props) => {
   const [timerActive, setTimerActive] = useState(false);
   const [breakActive, setBreakActive] = useState(false);
 
-  const [timerMinutes, setTimerMinutes] = useState(1);
+  const [timerMinutes, setTimerMinutes] = useState(25);
   const [timerSeconds, setTimerSeconds] = useState(0);
-  const [breakMinutes, setBreakMinutes] = useState(1);
+  const [breakMinutes, setBreakMinutes] = useState(5);
   const [breakSeconds, setBreakSeconds] = useState(0);
   const [show] = useToast();
 
@@ -47,12 +47,12 @@ const Pomodoro = (props) => {
   };
 
   const resetBreakTime = () => {
-    setBreakMinutes(1);
+    setBreakMinutes(5);
     setBreakSeconds(0);
   };
 
   const resetTimerTime = () => {
-    setTimerMinutes(1);
+    setTimerMinutes(25);
     setTimerSeconds(0);
   };
 
