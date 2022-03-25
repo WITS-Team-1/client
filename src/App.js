@@ -44,7 +44,7 @@ function App() {
       <Pomodoro show={showPomodoro} setHide={hidePomodoroHandler} />
       <SoundWidget show={showSound} setHide={hideSounderHandler} />
       <ToDo show={showTodo} setHide={hideTodoHandler} />
-      <Dock showPomodoro={showPomodoroHandler} showSound={showSoundHandler} />
+      <Dock showPomodoro={showPomodoroHandler} showSound={showSoundHandler} showTodo={showTodoHandler}/>
       
     </div>
   );

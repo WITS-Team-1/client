@@ -70,7 +70,7 @@ function ToDoMaster(props) {
   const inputRef = useRef();
 
   return (
-    <div className='widgetcontainer' style={{ display: 'flex' }}>
+    <div className='widgetcontainer' style={{ display: props.show ? 'flex' : 'none' }}>
       <div className='widgetheader'>
         <input
           ref={inputRef}

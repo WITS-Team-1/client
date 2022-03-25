@@ -37,6 +37,11 @@ const Dock = (props) => {
     props.showPomodoro();
   };
 
+  const todoHandler = (e) => {
+    e.preventDefault();
+    props.showTodo();
+  }
+
   return (
     <React.Fragment>
       <div className='calendarwidget'>
@@ -68,7 +73,7 @@ const Dock = (props) => {
                 <button className='button-noborder'>
                   <img src={spotify} width='60' height='60' alt='Spotify' />
                 </button>
-                <button className='button-noborder'>
+                <button className='button-noborder' onClick={todoHandler}>
                   <img src={todolist} width='60' height='60' alt='To-do List' />
                 </button>
                 <button className='button-noborder' onClick={soundHandler}>
