@@ -3,6 +3,7 @@ import styles from './Pomodoro.module.css';
 import playButton from '../../assets/images/Pomodoro/startButton.png';
 import pauseButton from '../../assets/images/Pomodoro/pauseButton.png';
 import closeButton from '../../assets/images/Pomodoro/closeButton.png';
+import {useToast } from "@trycourier/react-toast";
 
 function Timer(props) {
   return (
@@ -21,10 +22,11 @@ const Pomodoro = (props) => {
   const [timerActive, setTimerActive] = useState(false);
   const [breakActive, setBreakActive] = useState(false);
 
-  const [timerMinutes, setTimerMinutes] = useState(25);
+  const [timerMinutes, setTimerMinutes] = useState(1);
   const [timerSeconds, setTimerSeconds] = useState(0);
-  const [breakMinutes, setBreakMinutes] = useState(5);
+  const [breakMinutes, setBreakMinutes] = useState(1);
   const [breakSeconds, setBreakSeconds] = useState(0);
+  const [show] = useToast();
 
   const timerMinutesString = (minutes) =>
     Number(minutes) < 10 ? `0${minutes}` : `${minutes}`;
@@ -45,12 +47,12 @@ const Pomodoro = (props) => {
   };
 
   const resetBreakTime = () => {
-    setBreakMinutes(5);
+    setBreakMinutes(1);
     setBreakSeconds(0);
   };
 
   const resetTimerTime = () => {
-    setTimerMinutes(25);
+    setTimerMinutes(1);
     setTimerSeconds(0);
   };
 
@@ -94,8 +96,10 @@ const Pomodoro = (props) => {
             } else {
               // 00:00
               // reset time minutes + seconds, turn off timer
+
               setBreakActive(false);
               resetBreakTime();
+              show("Pomedo Timer Break")
             }
           } else {
             // not 00:00
