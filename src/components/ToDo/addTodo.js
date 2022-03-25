@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './ToDoItem/Todo.css';
-import taskButton from '/Users/user/Documents/GitHub/client/src/assets/images/ToDo/coolicon.png';
+import taskButton from '../../assets/images/ToDo/coolicon.png';
 
 
 
