@@ -5,8 +5,12 @@ import styles from './App.module.css';
 import Dock from './components/Dock/Dock';
 import TimeWidget from './components/TimeWidget/TimeWidget';
 import Pomodoro from './components/Pomodoro/Pomodoro';
+import { CourierProvider } from "@trycourier/react-provider";
+import { Toast } from "@trycourier/react-toast";
+
 import ToDo from './components/ToDo/ToDoMaster'
 import './components/ToDo/ToDoItem/Todo.css'
+
 
 function App() {
   const [showPomodoro, setShowPomodoro] = useState(true);
@@ -38,6 +42,8 @@ function App() {
   };
 
   return (
+    <CourierProvider clientKey={"CLIENT_KY"} userId={"USER_ID"}>
+    <Toast />
     <div className={styles.layoutContainer}>
       <div className={styles.heroImage}></div>
       <TimeWidget />
@@ -47,6 +53,7 @@ function App() {
       <Dock showPomodoro={showPomodoroHandler} showSound={showSoundHandler} showTodo={showTodoHandler}/>
       
     </div>
+    </CourierProvider>
   );
 }
 
