@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import TodoList from './ToDoList';
-import closeButton from './assets/images/ToDo/closeButton.png';
+import closeButton from '../../assets/images/ToDo/closeButton.png';
 import AddTodo from './addTodo';
 
-import './App.css';
+
 import './ToDoItem/Todo.css';
 
 
