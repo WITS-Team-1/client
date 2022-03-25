@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import sound_widget from '../assets/images/sound_widget.png';
-import x_button from '../assets/images/x_button.png';
+import sound_widget from '../../assets/images/sound_widget.png';
+import x_button from '../../assets/images/x_button.png';
 import styles from './SoundWidget.module.css';
 
 function SoundSlider(props) {
@@ -26,15 +26,14 @@ function SoundSlider(props) {
   );
 }
 
-function SoundWidgetv2() {
+function SoundWidget(props) {
   const [volume, setVolume] = useState({});
-  const [hideWidget, setHideWidget] = useState(false);
 
   const hideWidgetClick = () => {
-    setHideWidget(true);
+    props.setHide();
   };
 
-  const widgetDisplayStyle = hideWidget ? 'none' : 'null';
+  const widgetDisplayStyle = props.show ? 'flex' : 'none';
 
   const sounds = [
     {
@@ -55,7 +54,6 @@ function SoundWidgetv2() {
   ];
 
   const onChangeVolume = (e) => {
-    console.log(e.target.value);
     setVolume((prev) => {
       const volumeObj = {
         ...prev,
@@ -83,8 +81,7 @@ function SoundWidgetv2() {
       >
         <div className={styles.closeButton}>
           <button onClick={hideWidgetClick}>
-            {' '}
-            <img src={x_button} width='16' height='16' alt='x-icon' />{' '}
+            <img src={x_button} width='14' height='14' alt='x-icon' />
           </button>
         </div>
         {soundsWidget}
@@ -92,4 +89,4 @@ function SoundWidgetv2() {
     </div>
   );
 }
-export default SoundWidgetv2;
+export default SoundWidget;

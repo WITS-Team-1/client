@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SoundWidget from './SoundWidget/SoundWidget';
+import SoundWidget from './components/SoundWidget/SoundWidget';
 import styles from './App.module.css';
 
 import Dock from './components/Dock/Dock';
@@ -11,6 +11,7 @@ import { Toast } from "@trycourier/react-toast";
 
 function App() {
   const [showPomodoro, setShowPomodoro] = useState(true);
+  const [showSound, setShowSound] = useState(true);
 
   const showPomodoroHandler = () => {
     setShowPomodoro(true);
@@ -20,6 +21,14 @@ function App() {
     setShowPomodoro(false);
   };
 
+  const showSoundHandler = () => {
+    setShowSound(true);
+  };
+
+  const hideSounderHandler = () => {
+    setShowSound(false);
+  };
+
   return (
     <CourierProvider clientKey={"CLIENT_KY"} userId={"USER_ID"}>
     <Toast />
@@ -27,8 +36,8 @@ function App() {
       <div className={styles.heroImage}></div>
       <TimeWidget />
       <Pomodoro show={showPomodoro} setHide={hidePomodoroHandler} />
-      <SoundWidget />
-      <Dock showPomodoro={showPomodoroHandler} />
+      <SoundWidget show={showSound} setHide={hideSounderHandler} />
+      <Dock showPomodoro={showPomodoroHandler} showSound={showSoundHandler} />
     </div>
     </CourierProvider>
   );

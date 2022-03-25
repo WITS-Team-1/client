@@ -74,7 +74,118 @@ a #icons {
 }
 
 .calendarFonts {
-    all: initial;
+  all: initial;
+}
+
+.button-exit {
+  border: none;
+  color: white;
+  background-color: transparent;
+  left: 240px;
+  position: relative;
+  top: 14px;
+}
+
+.button-noborder {
+  border: none;
+  background-color: transparent;
+}
+
+.sdp--date-btn__selected {
+  background-color: var(--theme-color);
+  box-shadow: var(--shadow);
+  color: var(--selected-date-color);
+  border-radius: 1rem;
+  width: 35px;
+  height: 35px;
+}
+
+.sdp--month-picker {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: groove;
+  border-bottom-width: medium;
+}
+
+.sdp--dates-grid {
+  display: grid !important;
+  grid-gap: 4px !important;
+  gap: 10px !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  justify-items: center !important;
+  height: 18rem !important;
+  display: grid !important;
+  margin: 0.5rem 0 0 !important;
+  font-size: small !important;
+}
+
+.sdp--text {
+  color: #000000;
+  font-size: large;
+  font-weight: 200;
+}
+
+.sdp--sdp--text__inactive {
+  font-weight: bolder;
+}
+
+.sdp--square-btn__shadowed,
+.sdp--square-btn__shadowed:focus:hover {
+  box-shadow: none;
+}
+
+p.sdp--text.sdp--month-name {
+  font-weight: bold;
+  font-size: small;
+}
+
+.sdp--square-btn__shadowed,
+.sdp--square-btn__shadowed:focus:hover {
+  box-shadow: none;
+}
+
+p.sdp--text.sdp--month-name {
+  font-weight: bold;
+  font-size: small;
+}
+
+.sdp--text {
+  color: #000000;
+  font-size: large;
+  font-weight: 200;
+}
+
+.sdp--sdp--text__inactive {
+  font-weight: bolder;
+}
+
+.div.sdp {
+  background-color: white !important;
+  width: 350px !important;
+  height: 350px !important;
+}
+
+.sdp {
+  --theme-color: #e4e4e4 !important; /* violet color */
+  --selected-date-color: #000000 !important; /* light-gray color */
+  --font: 'KorolevMedium', sans-serif !important;
+  --shadow: none !important;
+}
+
+.calendarwidget {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  border-radius: 20px;
+  border-top: solid;
+  background-color: white;
+  color: white;
+}
+
+.button-exit img {
+  width: 15px;
+  height: 15px;
 }
 
 .button-exit {
